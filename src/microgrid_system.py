@@ -40,7 +40,7 @@ class WindSource(EnergySource):
         if speed < 3.0:
             return 0.0
         return self.rated_capacity_w * (speed / 12.0)
-g
+
 
 
 
