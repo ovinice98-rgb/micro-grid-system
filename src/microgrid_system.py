@@ -29,6 +29,7 @@ class SolarSource(EnergySource):
 
 
 
+
 # WIND MODULE
 class WindSource(EnergySource):
     def generate(self, conditions: dict) -> float:
