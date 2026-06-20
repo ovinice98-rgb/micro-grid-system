@@ -36,5 +36,8 @@ def generate(self, conditions: dict):
         return self.rated_capacity_w * (speed / 12.0)
 # Wind asset verified by [Oladunjoye Olamiposi Caleb
 Cpe/2023/1082]
-
+class MicrogridController:
+    def __init__(self):
+        self.sources = []
+        self.storage = None
 
