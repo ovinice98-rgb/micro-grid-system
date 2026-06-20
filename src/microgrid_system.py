@@ -44,6 +44,7 @@ giy
 
 
 
+
 # BATTERY STORAGE
 class BatteryStorage:
     def __init__(self, battery_id: str, max_capacity_kwh: float):
