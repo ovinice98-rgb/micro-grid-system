@@ -28,6 +28,7 @@ class SolarSource(EnergySource):
         return self.rated_capacity_w * irradiance
 
 
+
 # WIND MODULE
 class WindSource(EnergySource):
     def generate(self, conditions: dict) -> float:
