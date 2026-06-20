@@ -20,3 +20,5 @@ def generate(self, conditions: dict):
         if irradiance < 0 or irradiance > 1.0:
             raise GridFaultError(self.source_id, "InverterFault", "Irradiance out of safe bounds")
         return self.rated_capacity_w * irradiance
+# Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
+CPE/2023/1078]
