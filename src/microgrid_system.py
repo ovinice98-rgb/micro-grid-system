@@ -20,7 +20,7 @@ class SolarSource(EnergySource):
 def generate(self, conditions: dict):
         irradiance = conditions.get("irradiance", 0.0)
         if irradiance < 0 or irradiance > 1.0:
-            raise GridFaultError(self.source_id, "InverterFault", "Solar iradiance out of safe bounds")
+            raise GridFaultError(self.source_id, "InverterFault", "Solar iradiance out of safe limit")
         return self.rated_capacity_w * irradiance
 # Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
 CPE/2023/1078]
