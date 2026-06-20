@@ -44,3 +44,5 @@ def add_source(self, source: EnergySource):
         total_gen = sum(s.generate(conditions) for s in self.sources)
         net_power = total_gen - total_load_w
         return {"generation": total_gen, "load": total_load_w, "net": net_power}
+
+# Grid controller verified by [Ogheneyorehme Ovie Favour CPE/2023/1075]
