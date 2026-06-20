@@ -62,6 +62,7 @@ class BatteryStorage:
         self.current_charge_kwh -= energy_kwh
 
 
+
 # SYSTEM CONTROL
 class MicrogridController:
     def __init__(self):
