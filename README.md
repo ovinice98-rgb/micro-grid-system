@@ -1,2 +1,4 @@
-# micro-grid-system
-CPE 310 Capstone Project 6: Renewable Energy Microgrid Management System
+class MicrogridController:
+    def __init__(self):
+        self.sources = []
+        self.storage = None
