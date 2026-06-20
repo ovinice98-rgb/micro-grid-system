@@ -14,4 +14,9 @@ class EnergySource(ABC):
     @abstractmethod
     def generate(self, conditions: dict):
         pass
-
+class SolarSource(EnergySource):
+    def generate(self, conditions: dict):
+        irradiance = conditions.get("irradiance", 0.0)
+        if irradiance < 0 or irradiance > 1.0:
+            raise GridFaultError(self.source_id, "InverterFault", "Irradiance out of safe bounds")
+        return self.rated_capacity_w * irradiance
