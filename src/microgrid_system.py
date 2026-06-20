@@ -14,3 +14,4 @@ class EnergySource(ABC):
     @abstractmethod
     def generate(self, conditions: dict):
         pass
+class SolarSource(EnergySource):
