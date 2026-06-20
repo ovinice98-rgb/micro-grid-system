@@ -25,3 +25,10 @@ def generate(self, conditions: dict):
 # Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
 CPE/2023/1078]
 classclass WindSource(EnergySource):
+def generate(self, conditions: dict):
+        speed = conditions.get("wind_speed", 0.0)
+        if speed > 25.0:
+            raise GridFaultError(self.source_id, "HighWindCutOut", "Wind speed exceeds safety limits")
+        if speed < 3.0:
+            return 0.0
+        return self.rated_capacity_w * (speed / 12.0)
