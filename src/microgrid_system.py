@@ -61,3 +61,5 @@ class MicrogridController:
         net_power = total_gen - total_load_w
         return {"generation": total_gen, "load": total_load_w, "net": net_power, "net_balance": net_power}
 
+
+
