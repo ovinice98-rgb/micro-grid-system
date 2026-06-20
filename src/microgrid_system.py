@@ -14,16 +14,14 @@ class EnergySource(ABC):
     @abstractmethod
     def generate(self, conditions: dict):
         pass
-        # Co-authored by [Olaleye Bethel Bolutife 
-CPE/2023/1084]
+        # Co-authored by [Olaleye Bethel Bolutife CPE/2023/1084]
 class SolarSource(EnergySource):
 def generate(self, conditions: dict):
         irradiance = conditions.get("irradiance", 0.0)
         if irradiance < 0 or irradiance > 1.0:
             raise GridFaultError(self.source_id, "InverterFault", "Solar iradiance out of safe limit")
         return self.rated_capacity_w * irradiance
-# Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
-CPE/2023/1078]
+# Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi CPE/2023/1078]
 # By [Olayele Bethel]
 # Co-authored by [OGBOYE DIVINE AYOMIDE CPE/2023/1074]
 classclass WindSource(EnergySource):
@@ -34,8 +32,7 @@ def generate(self, conditions: dict):
         if speed < 3.0:
             return 0.0
         return self.rated_capacity_w * (speed / 12.0)
-# Wind asset verified by [Oladunjoye Olamiposi Caleb
-Cpe/2023/1082]
+   # Wind asset verified by [Oladunjoye Olamiposi Caleb Cpe/2023/1082]
 class MicrogridController:
     def __init__(self):
         self.sources = []
