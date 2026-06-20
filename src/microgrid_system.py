@@ -25,7 +25,7 @@ def generate(self, conditions: dict):
 # Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
 CPE/2023/1078]
 # By [Olayele Bethel]
-# Co-authored by [OGBOYE DIVINE AYOMIDE CPE/2023/1074
+# Co-authored by [OGBOYE DIVINE AYOMIDE CPE/2023/1074]
 classclass WindSource(EnergySource):
 def generate(self, conditions: dict):
         speed = conditions.get("wind_speed", 0.0)
