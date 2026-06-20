@@ -24,3 +24,4 @@ def generate(self, conditions: dict):
         return self.rated_capacity_w * irradiance
 # Solar asset verified by [Oguntade Oluwasikemi Oluwadarasimi 
 CPE/2023/1078]
+classclass WindSource(EnergySource):
